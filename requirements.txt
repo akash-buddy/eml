@@ -10,3 +10,4 @@ pandas_datareader
 yfinance
 requests
 bs4 
+schedule==1.2.1
