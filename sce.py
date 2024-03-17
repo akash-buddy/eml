@@ -1,13 +1,5 @@
 
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-from datetime import datetime
-import pandas_datareader as web
-import yfinance as yf
-# import time
-import requests
-from bs4 import BeautifulSoup
+
 import streamlit as st
 
 import smtplib
