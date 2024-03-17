@@ -47,16 +47,17 @@ def stop_scheduling(stop_time):
     schedule.clear()  # Clear all scheduled tasks
     print(f"Scheduling stopped at {stop_time}")
 
-# # Main function
-# if __name__ == "__main__":
-#     start_time = "17:29"  # Specify the start time
-#     stop_time = "17:30"   # Specify the stop time
-    
-#     start_scheduling(start_time)
-#     while True:
-#         current_time = time.strftime("%H:%M", time.localtime())
-#         if current_time >= stop_time:
-#             stop_scheduling(current_time)
-#             break
-#         schedule.run_pending()
-#         time.sleep(1)
+
+start_time = st.text_input('start_time', '09:15') 
+stop_time = st.text_input('stop_time', '09:16')
+
+
+if st.button('Say hello'):
+    start_scheduling(start_time)
+    while True:
+        current_time = time.strftime("%H:%M", time.localtime())
+        if current_time >= stop_time:
+            stop_scheduling(current_time)
+            break
+        schedule.run_pending()
+        time.sleep(1)
