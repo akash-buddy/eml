@@ -7,6 +7,19 @@ import time
 import streamlit as st
 
 st.write("gello")
+def geeks():
+    print("Shaurya says Geeksforgeeks")
+ 
+# # Task scheduling
+# # After every 10mins geeks() is called. 
+# schedule.every(1).minutes.do(geeks)
+# while True:
+ 
+#     # Checks whether a scheduled task 
+#     # is pending to run or not
+#     schedule.run_pending()
+#     time.sleep(1)
+
 # # Function to send email
 # def send_email(subject, body):
 #     sender_email = "your_email@example.com"
@@ -34,21 +47,6 @@ st.write("gello")
 #     if data["Short_MA"].iloc[-2] < data["Long_MA"].iloc[-2] and data["Short_MA"].iloc[-1] > data["Long_MA"].iloc[-1]:
 #         message = f"Moving average crossover detected for {symbol}. Buy signal!"
 #         send_email("Moving Average Crossover Alert", message)
-
-
-     
-def geeks():
-    print("Shaurya says Geeksforgeeks")
- 
-# Task scheduling
-# After every 10mins geeks() is called. 
-schedule.every(1).minutes.do(geeks)
-while True:
- 
-    # Checks whether a scheduled task 
-    # is pending to run or not
-    schedule.run_pending()
-    time.sleep(1)
 
 # def schedule_crossover_check():
 #     # Schedule the crossover check to run every 5 minutes after 10:00 AM
