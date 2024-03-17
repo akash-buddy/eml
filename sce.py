@@ -1,8 +1,4 @@
-# import yfinance as yf
-# import smtplib
-# from email.mime.multipart import MIMEMultipart
-# from email.mime.text import MIMEText
-import schedule
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -13,22 +9,52 @@ import yfinance as yf
 import requests
 from bs4 import BeautifulSoup
 import streamlit as st
-# from PIL import Image
 
+import smtplib
+import schedule
+import time
 
-st.set_page_config(
-    page_title='Akash',
-    layout='wide'
-)
-
-# tab1, tab2, tab3 = st.tabs(["Nifty 100", "Banking" , "Agriculture", "Automobile"])
-
-# with tab1:
-dg='hdfc-bank-ltd'
-st.markdown(f'[Click here to go to another page](https://groww.in/charts/stocks/{dg}?exchange=NSE)')
+def send_email(body):
+    sender_email = "akashemail707@gmail.com"
+    receiver_email = "akash7000a@gmail.com"
+    password = "jzzg djgs jwzc daeh"
+    server=smtplib.SMTP("smtp.gmail.com", 587)
+    server.starttls()
+    server.login(sender_email, password)
+    print("login successful")
+    server.sendmail(sender_email, receiver_email,body)
+    server.quit()
 
 def geeks():
-    print("Shaurya says Geeksforgeeks")
+    print("enter in geeks")
+    message = "Moving average crossover detected for Buy signal!"
+    send_email(f"Moving Average Crossover Alert, {message}")
+
+
+def start_scheduling(start_time):
+    schedule.every().day.at(start_time).do(geeks)  # Schedule the task to start at the specified time
+    print(f"Scheduling started at {start_time}")
+
+# Function to stop scheduling
+def stop_scheduling(stop_time):
+    schedule.clear()  # Clear all scheduled tasks
+    print(f"Scheduling stopped at {stop_time}")
+
+# Main function
+if __name__ == "__main__":
+    start_time = "14:11"  # Specify the start time
+    stop_time = "14:13"   # Specify the stop time
+    
+    start_scheduling(start_time)
+    
+    # Keep the program running until the stop time is reached
+    while True:
+        current_time = time.strftime("%H:%M", time.localtime())
+        if current_time >= stop_time:
+            stop_scheduling(current_time)
+            break
+        schedule.run_pending()
+        time.sleep(1)
  
 # # Task scheduling
 # # After every 10mins geeks() is called. 
