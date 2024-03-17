@@ -14,6 +14,17 @@ import smtplib
 import schedule
 import time
 
+st.set_page_config(
+    page_title='Akash',
+    layout='wide'
+)
+
+# tab1, tab2, tab3 = st.tabs(["Nifty 100", "Banking" , "Agriculture", "Automobile"])
+
+# with tab1:
+dg='hdfc-bank-ltd'
+st.markdown(f'[Click here to go to another page](https://groww.in/charts/stocks/{dg}?exchange=NSE)')
+
 def send_email(body):
     sender_email = "akashemail707@gmail.com"
     receiver_email = "akash7000a@gmail.com"
