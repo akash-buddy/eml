@@ -35,10 +35,10 @@ def geeks():
 
 import datetime
 
-t = st.time_input('Set an alarm for', datetime.time(9, 20))
+t = st.text_input('time', '9:20')
 st.write('Alarm is set for', t)
 
-schedule.every().day.at(f"{t}").do(geeks)  # Schedule the task to start at the specified tim
+schedule.every().day.at(t).do(geeks)  # Schedule the task to start at the specified tim
 schedule.run_all()
 
 # # # Main function
