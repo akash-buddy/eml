@@ -33,15 +33,13 @@ def geeks():
     message = "Moving average crossover detected for Buy signal!"
     send_email(f"Moving Average Crossover Alert, {message}")
 
+import datetime
 
-def start_scheduling(start_time):
-    schedule.every().day.at(start_time).do(geeks)  # Schedule the task to start at the specified time
-    print(f"Scheduling started at {start_time}")
+t = st.time_input('Set an alarm for', datetime.time(9, 20))
+st.write('Alarm is set for', t)
 
-# Function to stop scheduling
-def stop_scheduling(stop_time):
-    schedule.clear()  # Clear all scheduled tasks
-    print(f"Scheduling stopped at {stop_time}")
+schedule.every().day.at(f"{t}").do(geeks)  # Schedule the task to start at the specified tim
+schedule.run_all()
 
 # # # Main function
 # if __name__ == "__main__":
