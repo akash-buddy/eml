@@ -17,31 +17,31 @@ st.set_page_config(
 dg='hdfc-bank-ltd'
 st.markdown(f'[Click here to go to another page](https://groww.in/charts/stocks/{dg}?exchange=NSE)')
 
-# def send_email(body):
-#     sender_email = "akashemail707@gmail.com"
-#     receiver_email = "akash7000a@gmail.com"
-#     password = "jzzg djgs jwzc daeh"
-#     server=smtplib.SMTP("smtp.gmail.com", 587)
-#     server.starttls()
-#     server.login(sender_email, password)
-#     print("login successful")
-#     server.sendmail(sender_email, receiver_email,body)
-#     server.quit()
+def send_email(body):
+    sender_email = "akashemail707@gmail.com"
+    receiver_email = "akash7000a@gmail.com"
+    password = "jzzg djgs jwzc daeh"
+    server=smtplib.SMTP("smtp.gmail.com", 587)
+    server.starttls()
+    server.login(sender_email, password)
+    print("login successful")
+    server.sendmail(sender_email, receiver_email,body)
+    server.quit()
 
-# def geeks():
-#     print("enter in geeks")
-#     message = "Moving average crossover detected for Buy signal!"
-#     send_email(f"Moving Average Crossover Alert, {message}")
+def geeks():
+    print("enter in geeks")
+    message = "Moving average crossover detected for Buy signal!"
+    send_email(f"Moving Average Crossover Alert, {message}")
 
 
-# def start_scheduling(start_time):
-#     schedule.every().day.at(start_time).do(geeks)  # Schedule the task to start at the specified time
-#     print(f"Scheduling started at {start_time}")
+def start_scheduling(start_time):
+    schedule.every().day.at(start_time).do(geeks)  # Schedule the task to start at the specified time
+    print(f"Scheduling started at {start_time}")
 
-# # Function to stop scheduling
-# def stop_scheduling(stop_time):
-#     schedule.clear()  # Clear all scheduled tasks
-#     print(f"Scheduling stopped at {stop_time}")
+# Function to stop scheduling
+def stop_scheduling(stop_time):
+    schedule.clear()  # Clear all scheduled tasks
+    print(f"Scheduling stopped at {stop_time}")
 
 # # Main function
 # if __name__ == "__main__":
