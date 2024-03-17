@@ -15,21 +15,21 @@ st.set_page_config(
 
 # with tab1:
 dg='hdfc-bank-ltd'
-st.markdown(f'[Click here to go to another page](https://groww.in/charts/stocks/{dg}?exchange=NSE)')
+# st.markdown(f'[Click here to go to another page](https://groww.in/charts/stocks/{dg}?exchange=NSE)')
 
 
 
-# Function to execute at 10:00 AM
-def my_function():
-    print("Executing function at 10:00 AM")
+# # Function to execute at 10:00 AM
+# def my_function():
+#     print("Executing function at 10:00 AM")
 
-# Schedule the function to run at 10:00 AM
-schedule.every().day.at("16:55").do(my_function)
+# # Schedule the function to run at 10:00 AM
+# schedule.every().day.at("16:55").do(my_function)
 
-# Main loop to run the scheduler
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+# # Main loop to run the scheduler
+# while True:
+#     schedule.run_pending()
+#     time.sleep(1)
 
 
 
