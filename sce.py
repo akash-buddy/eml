@@ -3,10 +3,30 @@
 # from email.mime.multipart import MIMEMultipart
 # from email.mime.text import MIMEText
 import schedule
-import time
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from datetime import datetime
+import pandas_datareader as web
+import yfinance as yf
+# import time
+import requests
+from bs4 import BeautifulSoup
 import streamlit as st
+# from PIL import Image
 
-st.write("gello")
+
+st.set_page_config(
+    page_title='Akash',
+    layout='wide'
+)
+
+# tab1, tab2, tab3 = st.tabs(["Nifty 100", "Banking" , "Agriculture", "Automobile"])
+
+# with tab1:
+dg='hdfc-bank-ltd'
+st.markdown(f'[Click here to go to another page](https://groww.in/charts/stocks/{dg}?exchange=NSE)')
+
 def geeks():
     print("Shaurya says Geeksforgeeks")
  
