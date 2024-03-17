@@ -6,7 +6,7 @@ Pillow==9.2.0
 plotly==5.10.0
 streamlit==1.16.0
 
-smtplib
+smtplib==0.1.1
 pandas_datareader
 yfinance
 requests
