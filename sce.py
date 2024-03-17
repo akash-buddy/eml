@@ -29,7 +29,7 @@ def send_email(body):
     server=smtplib.SMTP("smtp.gmail.com", 587)
     server.starttls()
     server.login(sender_email, password)
-    print("login successful")
+    st.write("login successful")
     server.sendmail(sender_email, receiver_email,body)
     server.quit()
 
@@ -40,12 +40,12 @@ def task():
 # Function to start scheduling
 def start_scheduling(start_time):
     schedule.every().day.at(start_time).do(task)  # Schedule the task to start at the specified time
-    print(f"Scheduling started at {start_time}")
+    st.write(f"Scheduling started at {start_time}")
 
 # Function to stop scheduling
 def stop_scheduling(stop_time):
     schedule.clear()  # Clear all scheduled tasks
-    print(f"Scheduling stopped at {stop_time}")
+    st.write(f"Scheduling stopped at {stop_time}")
 
 
 start_time = st.text_input('start_time', '09:15') 
