@@ -49,8 +49,8 @@ def stop_scheduling(stop_time):
 
 # Main function
 if __name__ == "__main__":
-    start_time = "17:24:45"  # Specify the start time
-    stop_time = "17:25"   # Specify the stop time
+    start_time = "17:29"  # Specify the start time
+    stop_time = "17:30"   # Specify the stop time
     
     start_scheduling(start_time)
     while True:
