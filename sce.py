@@ -20,9 +20,9 @@ st.markdown(f'[Click here to go to another page](https://groww.in/charts/stocks/
 
 col1,col2=st.columns(2)
 with col1:
-    tab1, tab2, tab3 = st.tabs(["Nifty 100", "Banking" , "Agriculture", "Automobile"])
+    tab1, tab2, tab3 = st.tabs(["Banking" , "Agriculture", "Automobile"])
 with col2:
-    tab1, tab2, tab3 = st.tabs(["Nifty 100", "Banking" , "Agriculture", "Automobile"])
+    tab1, tab2, tab3 = st.tabs(["Banking" , "Agriculture", "Automobile"])
 
 
 # def send_email(body):
