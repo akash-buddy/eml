@@ -17,7 +17,7 @@ st.set_page_config(
 dg='hdfc-bank-ltd'
 st.markdown(f'[Click here to go to another page](https://groww.in/charts/stocks/{dg}?exchange=NSE)')
 # 
-symbol= st.selectbox('Symbols',("ABBOTINDIA", "ACC" , "ADANIENSOL" , "INFY", "AAPL"))
+symbol= st.selectbox('Symbols',("ADANIPORTS.NS", "ACC" , "ADANIENSOL" , "INFY", "AAPL"))
 # symbol="NVDA"
 col1,col2=st.columns(2)
 with col1:
