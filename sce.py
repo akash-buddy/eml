@@ -30,8 +30,9 @@ with col1:
             return news
         st.write("jay shree raam")
 
-#     #     num_articles =5
-#     #     news = get_stock_news(symbol, num_articles)
+        num_articles =5
+        news = get_stock_news(symbol, num_articles)
+        st.write(news)
 #     #     if news:
 #     #         for item in news:
 #     #             publish_time = datetime.utcfromtimestamp(item['providerPublishTime']).strftime('%Y-%m-%d %H:%M:%S UTC')
