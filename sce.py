@@ -42,6 +42,7 @@ with col1:
                 st.write(f"Publisher: {item['publisher']}")
                 st.write(f"Published Time: {publish_time}")
                 st.write(f"Link: [{item['link']}]({item['link']})")
+                st.write(item["relatedTickers"])
     
         else:
             print('No news available for the selected stock symbol.')
