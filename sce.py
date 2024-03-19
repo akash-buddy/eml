@@ -28,6 +28,8 @@ with col1:
             stock = yf.Ticker(symbol)
             news = stock.news[:num_articles]
             return news
+        st.write("jay shree raam")
+
 #     #     num_articles =5
 #     #     news = get_stock_news(symbol, num_articles)
 #     #     if news:
