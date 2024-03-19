@@ -19,15 +19,15 @@ st.markdown(f'[Click here to go to another page](https://groww.in/charts/stocks/
 
 symbol= st.selectbox('Symbols',("ABBOTINDIA.NS", "ACC.NS" , "ADANIENSOL.NS" , "INFY", "AAPL"))
 col1,col2=st.columns(2)
-# with col1:
+with col1:
     
-#     tab1, tab2, tab3 = st.tabs(["Banking" , "Agriculture", "Automobile"])
-#     # with tab1:
+    tab1, tab2, tab3 = st.tabs(["Banking" , "Agriculture", "Automobile"])
+    with tab1:
         
-#     #     def get_stock_news(symbol, num_articles=5):
-#     #         stock = yf.Ticker(symbol)
-#     #         news = stock.news[:num_articles]
-#     #         return news
+        def get_stock_news(symbol, num_articles=5):
+            stock = yf.Ticker(symbol)
+            news = stock.news[:num_articles]
+            return news
 #     #     num_articles =5
 #     #     news = get_stock_news(symbol, num_articles)
 #     #     if news:
