@@ -34,16 +34,17 @@ with col1:
         num_articles =5
         news = get_stock_news(symbol, num_articles)
         st.write(news)
-#     #     if news:
-#     #         for item in news:
-#     #             publish_time = datetime.utcfromtimestamp(item['providerPublishTime']).strftime('%Y-%m-%d %H:%M:%S UTC')
-#     #             st.title(item['title'])
-#     #             st.write(f"Publisher: {item['publisher']}")
-#     #             st.write(f"Published Time: {publish_time}")
-#     #             st.write(f"Link: [{item['link']}]({news_item['link']})")
+        
+        if news:
+            for item in news:
+                publish_time = datetime.utcfromtimestamp(item['providerPublishTime']).strftime('%Y-%m-%d %H:%M:%S UTC')
+                st.title(item['title'])
+                st.write(f"Publisher: {item['publisher']}")
+                st.write(f"Published Time: {publish_time}")
+                st.write(f"Link: [{item['link']}]({news_item['link']})")
     
-#     #     else:
-#     #         print('No news available for the selected stock symbol.')
+        else:
+            print('No news available for the selected stock symbol.')
 
 
 # with col2:
