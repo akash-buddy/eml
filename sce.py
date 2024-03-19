@@ -1,7 +1,7 @@
 
 
 import streamlit as st
-
+import yfinance as yf
 import smtplib
 import schedule
 import time
