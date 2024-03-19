@@ -17,8 +17,8 @@ st.set_page_config(
 dg='hdfc-bank-ltd'
 st.markdown(f'[Click here to go to another page](https://groww.in/charts/stocks/{dg}?exchange=NSE)')
 
-# symbol =st.selectboc('AAPL')
-# col1,col2=st.columns(2)
+symbol =st.selectboc('AAPL')
+col1,col2=st.columns(2)
 # with col1:
     
 #     tab1, tab2, tab3 = st.tabs(["Banking" , "Agriculture", "Automobile"])
