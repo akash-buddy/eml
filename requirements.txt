@@ -1,3 +1,4 @@
 streamlit==1.16.0
 schedule==1.2.1
 yfinance
+datetime
