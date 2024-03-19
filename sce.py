@@ -35,6 +35,23 @@ with col1:
         news = get_stock_news(symbol, num_articles)
         st.write(news)
         
+
+
+
+with col2:
+    tab1, tab2, tab3 = st.tabs(["Banking" , "Agriculture", "Automobile"])
+    with tab1:
+        
+        def get_stock_news(symbol, num_articles=5):
+            stock = yf.Ticker(symbol)
+            news = stock.news[:num_articles]
+            return news
+        st.write("jay shree raam")
+
+        num_articles =5
+        news = get_stock_news(symbol, num_articles)
+        # st.write(news)
+        
         if news:
             for item in news:
                 publish_time = datetime.utcfromtimestamp(item['providerPublishTime']).strftime('%Y-%m-%d %H:%M:%S UTC')
@@ -45,10 +62,6 @@ with col1:
     
         else:
             print('No news available for the selected stock symbol.')
-
-
-# with col2:
-#     tab1, tab2, tab3 = st.tabs(["Banking" , "Agriculture", "Automobile"])
 
 
 # def send_email(body):
