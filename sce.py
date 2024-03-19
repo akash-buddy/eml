@@ -36,7 +36,7 @@ with col1:
                 publish_time = datetime.utcfromtimestamp(item['providerPublishTime']).strftime('%Y-%m-%d %H:%M:%S UTC')
                 st.title(item['title'])
                 st.write(f"Publisher: {item['publisher']}")
-                st.write(f"Published Time: {publish_time})
+                st.write(f"Published Time: {publish_time}")
                 st.write(f"Link: [{item['link']}]({news_item['link']})")
     
         else:
