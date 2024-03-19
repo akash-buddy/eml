@@ -41,7 +41,7 @@ with col1:
                 st.title(item['title'])
                 st.write(f"Publisher: {item['publisher']}")
                 st.write(f"Published Time: {publish_time}")
-                st.write(f"Link: [{item['link']}]({news_item['link']})")
+                st.write(f"Link: [{item['link']}]({item['link']})")
     
         else:
             print('No news available for the selected stock symbol.')
