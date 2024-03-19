@@ -17,30 +17,29 @@ st.set_page_config(
 dg='hdfc-bank-ltd'
 st.markdown(f'[Click here to go to another page](https://groww.in/charts/stocks/{dg}?exchange=NSE)')
 
-
+symbol =st.selectboc('AAPL')
 col1,col2=st.columns(2)
 with col1:
     
     tab1, tab2, tab3 = st.tabs(["Banking" , "Agriculture", "Automobile"])
-    with tab1:
+    # with tab1:
         
-        def get_stock_news(symbol, num_articles=5):
-            stock = yf.Ticker(symbol)
-            news = stock.news[:num_articles]
-            return news
-        symbol ='AAPL'
-        num_articles =5
-        news = get_stock_news(symbol, num_articles)
-        if news:
-            for item in news:
-                publish_time = datetime.utcfromtimestamp(item['providerPublishTime']).strftime('%Y-%m-%d %H:%M:%S UTC')
-                st.title(item['title'])
-                st.write(f"Publisher: {item['publisher']}")
-                st.write(f"Published Time: {publish_time}")
-                st.write(f"Link: [{item['link']}]({news_item['link']})")
+    #     def get_stock_news(symbol, num_articles=5):
+    #         stock = yf.Ticker(symbol)
+    #         news = stock.news[:num_articles]
+    #         return news
+    #     num_articles =5
+    #     news = get_stock_news(symbol, num_articles)
+    #     if news:
+    #         for item in news:
+    #             publish_time = datetime.utcfromtimestamp(item['providerPublishTime']).strftime('%Y-%m-%d %H:%M:%S UTC')
+    #             st.title(item['title'])
+    #             st.write(f"Publisher: {item['publisher']}")
+    #             st.write(f"Published Time: {publish_time}")
+    #             st.write(f"Link: [{item['link']}]({news_item['link']})")
     
-        else:
-            print('No news available for the selected stock symbol.')
+    #     else:
+    #         print('No news available for the selected stock symbol.')
 
 
 with col2:
